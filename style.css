@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2A303C;
+}
+
+#container {
+    width: 444px;
+    max-width: 540px;
+    height: auto;
+    margin: 100px auto 20px;
+    padding: 40px 30px 80px;
+    background-color: #1F242D;
+}
+
+.todo-app h1 {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 800;
+    margin-left: 3em;
+}
+
+#flex {
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+    margin: 1em;
+}
+
+#flex em {
+    color: #A6ADBA;
+}
+
+#flex .fa-solid {
+    margin: 0em 0.1em;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #1FB2A6;
+    color: #fff;
+    text-align: center;
+}
+
+#flex .fa-solid:hover {
+    background-color: #207d76;
+}
+
+#form {
+    display: flex;
+    flex-direction: row;
+    gap: 29%;
+    margin: 1em;
+}
+
+input {
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    border: 3px solid #36D399;
+    padding: 1em;
+    background-color: #2A303C;
+    color: #A6ADBA;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid hsl(var(--su));
+}
+
+#form button {
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+#form .fa-solid {
+    color: #fff;
+    padding: 12px;
+    background-color: #D926A9;
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+
+#form .fa-solid:active {
+    background-color: #c3379e;
+}
+
+/* #button button {
+    width: 25px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #14d8c8;
+    margin: 1em;
+    background-color: #1F242D;
+    display: flex;
+    flex-direction: column;
+} */
+
+#container ul li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 14px;
+    padding: 12px 8px 12px 50px;
+    gap: 20px;
+    padding-bottom: 1em;
+    user-select: none;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+
+#container ul li::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-size: cover;
+    border: 3px solid #36D399;
+    background-position: center;
+    top: 7px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #A6ADBA;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+ul li.checked::before {
+    background-image: url(./Check.png);
+    background-color: #36D399;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    font-size: 12px;
+}
+
+ul li span {
+    position: absolute;
+    /* top: 5px; */
+    right: 45px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    border-radius: 10px;
+    padding: 5px 5px;
+    padding-right: 7px;
+    background-color: #F87272;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #2A303C;
+    }
+
+    #flex {
+        display: flex;
+        flex-direction: row;
+        gap: 50%;
+        margin: 1em;
+    }
+
+    #form {
+        display: flex;
+        flex-direction: row;
+        gap: 19%;
+        margin: 1em;
+    }
+
+    input {
+        width: 140px;
+        height: 50px;
+        border-radius: 5px;
+        border: 3px solid #36D399;
+        padding: 1em;
+        background-color: #2A303C;
+        color: #A6ADBA;
+        font-size: 15px;
+    }
+
+    ul li span {
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        font-weight: 600;
+        color: #000;
+        border-radius: 10px;
+        padding: 5px 5px;
+        padding-right: 7px;
+        background-color: #F87272;
+        text-align: center;
+    }
+
+    .todo-app h1 {
+        color: #ffffff;
+        font-family: sans-serif;
+        font-weight: 800;
+        font-size: 24px;
+        margin-left: 3em;
+    }
+
+    #flex em {
+        color: #A6ADBA;
+        /* font-size: 12px; */
+    }
+}

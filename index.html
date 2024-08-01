@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="container">
+        <div class="todo-app">
+            <h1>
+                To Do App
+            </h1>
+        </div>
+        <div id="flex">
+            <em>
+                0 of 0 remaining
+            </em>
+            <i class="fa-solid fa-box-archive"></i>
+        </div>
+        <div id="form">
+            <input type="text" id="todo-input" placeholder="enter a new todo">
+            <div onclick="addTask()" type="submit">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+        <ul id="todo-list">
+            <!-- <span><i class="fa-solid fa-circle-minus"></i></span> -->
+            <!-- <li class="checked">Task</li>
+            <li>Task</li>
+            <li>Task</li> -->
+        </ul>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
